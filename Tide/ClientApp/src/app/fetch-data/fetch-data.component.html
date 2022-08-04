@@ -1,0 +1,39 @@
+<h1 id="tableLabel">Tide Prediction</h1>
+
+<p>This component plots the tidal heights for the give location and date</p>
+
+<p *ngIf="!ports"><em>Loading...</em></p>
+
+<!--<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temp. (C)</th>
+            <th>Temp. (F)</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecasts">
+            <td>{{ forecast.date }}</td>
+            <td>{{ forecast.temperatureC }}</td>
+            <td>{{ forecast.temperatureF }}</td>
+            <td>{{ forecast.summary }}</td>
+        </tr>
+
+
+
+    </tbody>
+
+    
+</table>-->
+
+<p>
+
+    <select>
+        <option [ngValue]="null" disabled>Select Port</option>
+        <option *ngFor="let port of ports" [ngValue]="port">{{port}}</option>
+    </select>
+
+    <button type="submit">Submit</button>
+</p>
